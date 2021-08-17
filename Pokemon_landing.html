@@ -1,0 +1,62 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon</title>
+    <link rel="stylesheet" href="Pokemon.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body style="background-color: rgb(19, 19, 18);">
+    <div class="container-fluid" id="container1">
+        <div class="col" id="header-msg">
+        Choose Your Pokemon
+        </div>
+        <div class="row">
+            <div class="col">
+                <div onmouseover="pb_type_water()" onmouseout="hide_water()" class="poke_water"></div>
+                <div class="pb_type_description" id="desc_water">
+                    This is a "water" pokeball
+                </div>
+            </div>
+            <div class="col">
+                <div onmouseover="pb_type_grass()" onmouseout="hide_grass()" class="poke_grass"></div>
+                <div class="pb_type_description" id="desc_grass">
+                    This is a "Grass" pokeball
+                </div>
+            </div>
+            <div class="col">
+                <div onmouseover="pb_type_fire()" onmouseout="hide_fire()" class="poke_fire"></div>
+                <div class="pb_type_description" id="desc_fire">
+                    This is a "Fire" pokeball
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.poke_water').click(function(){
+                $('.poke_water').toggleClass('active');
+            })
+        })
+        $(document).ready(function(){
+            $('.poke_grass').click(function(){
+                $('.poke_grass').toggleClass('active');
+            })
+        })
+        $(document).ready(function(){
+            $('.poke_fire').click(function(){
+                $('.poke_fire').toggleClass('active');
+            })
+        })
+    </script>
+    <script src="Pokemon.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
